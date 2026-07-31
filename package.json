@@ -6,7 +6,8 @@
     "chat": "node src/index.js chat",
     "review": "node src/index.js review",
     "start": "node src/index.js",
-    "api": "node src/server/index.js"
+    "api": "node src/server/index.js",
+    "fix": "node src/index.js review"
   },
   "dependencies": {
     "@google/genai": "^2.15.0",

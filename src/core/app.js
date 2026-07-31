@@ -1,6 +1,7 @@
 import { getDiff } from "../github/pr.js";
 import { router } from "../router/index.js";
 import { commentReview } from "../github/review.js";
+import { generateFix } from "../fix/index.js";
 
 export async function runReview() {
   const diff = getDiff();
@@ -8,6 +9,9 @@ export async function runReview() {
   const review = await router(diff);
 
   console.log(review);
+
+const patch=await generateFix(diff);
+console.log(patch);
 
   if (
     process.env.GITHUB_OWNER &&
