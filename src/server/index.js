@@ -5,6 +5,7 @@ import helmet from "helmet";
 import compression from "compression";
 import morgan from "morgan";
 import { router } from "../router/index.js";
+import { health } from "../health/index.js";
 import chatRoutes from "../routes/chat.js";
 import { createSocket } from "../ws/server.js";
 
@@ -18,7 +19,7 @@ app.use(express.json());
 app.use("/v1/chat",chatRoutes);
 
 app.get("/health",(req,res)=>{
-  res.json({status:"ok"});
+  res.json(health());
 });
 
 app.post("/chat",async(req,res)=>{
