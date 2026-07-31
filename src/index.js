@@ -1,3 +1,4 @@
+import "dotenv/config";
 import "./config/plugins.js";
 const cmd=process.argv[2]||"review";
 

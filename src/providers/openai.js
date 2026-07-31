@@ -1,14 +1,32 @@
 import OpenAI from "openai";
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+let client=null;
+
+function getClient(){
+
+if(client) return client;
+
+if(!process.env.OPENAI_API_KEY){
+throw new Error("OPENAI_API_KEY not configured");
+}
+
+client=new OpenAI({
+apiKey:process.env.OPENAI_API_KEY
 });
 
-export async function openaiProvider(diff){
-  const res = await client.responses.create({
-    model:"gpt-5",
-    input:diff
-  });
+return client;
 
-  return res.output_text;
+}
+
+export async function openaiProvider(prompt){
+
+const res=await getClient().chat.completions.create({
+model:"gpt-4.1-mini",
+messages:[
+{role:"user",content:prompt}
+]
+});
+
+return res.choices[0].message.content;
+
 }
