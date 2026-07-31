@@ -1,7 +1,3 @@
-import models from "../config/models.js";
-
-import { runAll } from "../orchestrator/index.js";
-
 import { openaiProvider } from "../providers/openai.js";
 import { claudeProvider } from "../providers/claude.js";
 import { geminiProvider } from "../providers/gemini.js";
@@ -14,12 +10,26 @@ const providers={
   qwen:qwenProvider
 };
 
-export async function router(prompt){
+export async function runAll(prompt){
 
-  if(models.default==="all"){
-    return await runAll(prompt);
-  }
+  const result={};
 
-  return await providers[models.default](prompt);
+  await Promise.allSettled(
+
+    Object.entries(providers).map(async([name,fn])=>{
+
+      try{
+        result[name]=await fn(prompt);
+      }catch(e){
+        result[name]={
+          error:e.message
+        };
+      }
+
+    })
+
+  );
+
+  return result;
 
 }
