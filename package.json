@@ -11,7 +11,8 @@
     "mcp": "node src/mcp/server.js",
     "test": "vitest run",
     "lint": "eslint .",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "auth": "node src/index.js"
   },
   "dependencies": {
     "@google/genai": "^2.15.0",
