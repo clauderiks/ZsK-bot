@@ -1,8 +1,8 @@
-import argon2 from "argon2";
+import bcrypt from "bcryptjs";
 import { addUser,getUser } from "../users/store.js";
 
 export async function register(username,password){
-const hash=await argon2.hash(password);
+const hash=await bcrypt.hash(password,10);
 addUser(username,hash);
 }
 
@@ -11,5 +11,5 @@ const user=getUser(username);
 
 if(!user) return false;
 
-return await argon2.verify(user.password,password);
+return await bcrypt.compare(password,user.password);
 }
