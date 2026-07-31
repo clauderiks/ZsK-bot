@@ -12,7 +12,8 @@
     "test": "vitest run",
     "lint": "eslint .",
     "format": "prettier . --write",
-    "auth": "node src/index.js"
+    "auth": "node src/index.js",
+    "index": "node -e \"import('./src/rag/index.js').then(m=>m.indexRepo())\""
   },
   "dependencies": {
     "@google/genai": "^2.15.0",
