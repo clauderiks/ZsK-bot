@@ -3,10 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node src/index.js",
-    "review": "node src/index.js review",
     "chat": "node src/index.js chat",
-    "router": "node src/index.js router"
+    "review": "node src/index.js review",
+    "start": "node src/index.js"
   },
   "dependencies": {
     "@google/genai": "^2.15.0",
