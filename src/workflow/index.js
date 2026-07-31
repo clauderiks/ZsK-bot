@@ -5,6 +5,7 @@ import { runTests } from "../tester/index.js";
 import { review } from "../reviewer/index.js";
 import { commit } from "../committer/index.js";
 import { emitStage } from "../events/workflow.js";
+import { log } from "../logger/index.js";
 
 import { reviewTask } from "../agents/tasks/review.js";
 import { securityTask } from "../agents/tasks/security.js";
@@ -20,11 +21,13 @@ architecture:architectureTask
 
 export async function workflow(prompt){
 
+log("workflow","planning");
 emitStage("planning");
 setState(State.PLANNING);
 
 const plan=createPlan(prompt);
 
+log("workflow","executing");
 emitStage("executing");
 setState(State.EXECUTING);
 
@@ -36,6 +39,7 @@ prompt
 
 await review(prompt);
 
+log("workflow","testing");
 emitStage("testing");
 setState(State.TESTING);
 
@@ -43,6 +47,7 @@ const ok=runTests();
 
 if(ok){
 
+log("workflow","committing");
 emitStage("committing");
 setState(State.COMMITTING);
 
@@ -50,6 +55,7 @@ commit();
 
 }
 
+log("workflow","done");
 emitStage("done");
 setState(State.DONE);
 
