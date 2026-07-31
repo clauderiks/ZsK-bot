@@ -5,14 +5,21 @@
   "scripts": {
     "chat": "node src/index.js chat",
     "review": "node src/index.js review",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "api": "node src/server/index.js"
   },
   "dependencies": {
     "@google/genai": "^2.15.0",
     "@octokit/auth-action": "^6.0.2",
     "@octokit/rest": "^22.0.1",
     "@qwen-code/qwen-code": "^0.21.2",
+    "compression": "^1.8.1",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "simple-git": "^3.36.0"
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "morgan": "^1.11.0",
+    "simple-git": "^3.36.0",
+    "ws": "^8.21.1"
   }
 }
