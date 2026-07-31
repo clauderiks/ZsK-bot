@@ -1,10 +1,12 @@
 import express from "express";
+import { createServer } from "node:http";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
 import morgan from "morgan";
 import { router } from "../router/index.js";
 import chatRoutes from "../routes/chat.js";
+import { createSocket } from "../ws/server.js";
 
 const app=express();
 
@@ -26,6 +28,9 @@ app.post("/chat",async(req,res)=>{
 
 const port=process.env.PORT||3000;
 
-app.listen(port,()=>{
+const server=createServer(app);
+createSocket(server);
+
+server.listen(port,()=>{
   console.log("API running on",port);
 });

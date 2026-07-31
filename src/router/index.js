@@ -1,3 +1,4 @@
+import { bus } from "../events/bus.js";
 import models from "../config/models.js";
 
 import { runAll } from "../orchestrator/index.js";
@@ -20,6 +21,13 @@ export async function router(prompt){
     return await runAll(prompt);
   }
 
-  return await providers[models.default](prompt);
+  const result=await providers[models.default](prompt);
+
+bus.emit("ai",{
+model:models.default,
+response:result
+});
+
+return result;
 
 }
