@@ -1,3 +1,5 @@
+import models from "../config/models.js";
+
 import { openaiProvider } from "../providers/openai.js";
 import { claudeProvider } from "../providers/claude.js";
 import { geminiProvider } from "../providers/gemini.js";
@@ -10,12 +12,7 @@ const providers = {
   qwen: qwenProvider
 };
 
-export async function router(task) {
-  const model =
-    process.env.DEFAULT_MODEL ||
-    "openai";
-
-  const ai = providers[model];
-
-  console.log(await ai(task));
+export async function router(diff) {
+  const model = models.default;
+  return providers[model](diff);
 }

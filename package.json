@@ -9,6 +9,8 @@
     "router": "node src/index.js router"
   },
   "dependencies": {
+    "@google/genai": "^2.15.0",
+    "@qwen-code/qwen-code": "^0.21.2",
     "dotenv": "^17.4.2"
   }
 }
