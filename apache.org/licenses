@@ -1,0 +1,62 @@
+=== Một ví dụ về tệp Giấy phép Phần mềm Apache 1.1 ===
+
+Đây là Giấy phép Apache gốc, chỉ áp dụng cho các phiên bản rất cũ của các gói Apache (chẳng hạn như phiên bản 1.2 của máy chủ web).
+
+/* ====================================================================
+ * Bản quyền (c) 1995-1999 Tập đoàn Apache. Mọi quyền được bảo lưu.
+ *
+ * Phân phối lại và sử dụng dưới dạng mã nguồn và mã nhị phân, có hoặc không kèm theo
+ * Việc sửa đổi được cho phép với điều kiện tuân thủ các điều kiện sau:
+ * được đáp ứng:
+ *
+ * 1. Việc phân phối lại mã nguồn phải giữ nguyên bản quyền nêu trên
+ * Xin lưu ý, danh sách các điều khoản này và tuyên bố từ chối trách nhiệm sau đây.
+ *
+ * 2. Việc phân phối lại dưới dạng nhị phân phải sao chép bản quyền nêu trên.
+ * Xin lưu ý, danh sách các điều kiện này và tuyên bố từ chối trách nhiệm sau đây
+ * Tài liệu và/hoặc các tài liệu khác được cung cấp kèm theo
+ * phân bổ.
+ *
+ * 3. Tất cả các tài liệu quảng cáo đề cập đến các tính năng hoặc việc sử dụng này
+ * Phần mềm phải hiển thị thông báo xác nhận sau:
+ * "Sản phẩm này bao gồm phần mềm được phát triển bởi Tập đoàn Apache.
+ * Dùng cho dự án máy chủ HTTP Apache (http://www.apache.org/)."
+ *
+ * 4. Không được sử dụng các tên "Apache Server" và "Apache Group" để
+ * xác nhận hoặc quảng bá các sản phẩm được tạo ra từ phần mềm này mà không có sự cho phép hoặc ủy quyền.
+ * Xin phép bằng văn bản trước. Để xin phép bằng văn bản, vui lòng liên hệ
+ * apache@apache.org.
+ *
+ * 5. Các sản phẩm được tạo ra từ phần mềm này không được phép gọi là "Apache".
+ * Tên "Apache" cũng không được phép xuất hiện trong tên của họ nếu không có sự cho phép bằng văn bản trước đó.
+ * Được sự cho phép của Tập đoàn Apache.
+ *
+ * 6. Việc phân phối lại dưới bất kỳ hình thức nào cũng phải giữ nguyên các điều khoản sau:
+ * Lời cảm ơn:
+ * "Sản phẩm này bao gồm phần mềm được phát triển bởi Tập đoàn Apache.
+ * Dùng cho dự án máy chủ HTTP Apache (http://www.apache.org/)."
+ *
+ * PHẦN MỀM NÀY ĐƯỢC CUNG CẤP BỞI TẬP ĐOÀN APACHE "NGUYÊN TRẠNG" VÀ KHÔNG CÓ BẤT KỲ SỰ CHỊU TRÁCH NHIỆM NÀO.
+ * CÁC BẢO HÀNH RÕ RÀNG HOẶC NGẦM HIỂU, BAO GỒM NHƯNG KHÔNG GIỚI HẠN Ở,
+ * BẢO ĐẢM NGẦM VỀ KHẢ NĂNG THƯƠNG MẠI VÀ SỰ PHÙ HỢP CHO MỤC ĐÍCH CỤ THỂ
+ * MỤC ĐÍCH ĐƯỢC TUYÊN BỐ MIỄN TRÁCH NHIỆM. TRONG MỌI TRƯỜNG HỢP, TẬP ĐOÀN APACHE HOẶC SẼ KHÔNG CHỊU TRÁCH NHIỆM.
+ * CÁC BÊN ĐÓNG GÓP SẼ KHÔNG CHỊU TRÁCH NHIỆM ĐỐI VỚI BẤT KỲ THIỆT HẠI TRỰC TIẾP, GIÁN TIẾP, NGẪN NHIÊN NÀO,
+ * THIỆT HẠI ĐẶC BIỆT, MANG TÍNH CHẤT GƯƠNG MẪU HOẶC HẬU QUẢ (BAO GỒM, NHƯNG KHÔNG BAO GỒM NHƯNG)
+ * KHÔNG GIỚI HẠN Ở VIỆC MUA SẮM HÀNG HÓA HOẶC DỊCH VỤ THAY THẾ;
+ * MẤT QUYỀN SỬ DỤNG, DỮ LIỆU HOẶC LỢI NHUẬN; HOẶC GIÁN ĐOẠN KINH DOANH)
+ * CHO DÙ NGUYÊN NHÂN LÀ GÌ VÀ DỰA TRÊN BẤT KỲ LÝ THUYẾT TRÁCH NHIỆM PHÁP LÝ NÀO, CHO DÙ LÀ TRONG HỢP ĐỒNG,
+ * TRÁCH NHIỆM TUYỆT ĐỐI HOẶC TRÁCH NHIỆM DÂN SỰ (BAO GỒM CẢ SƠ SUẤT HOẶC CÁC TRƯỜNG HỢP KHÁC)
+ * PHÁT SINH TỪ BẤT KỲ CÁCH NÀO TRONG QUÁ TRÌNH SỬ DỤNG PHẦN MỀM NÀY, NGAY CẢ KHI ĐƯỢC KHUYÊN DÙNG
+ * VỀ KHẢ NĂNG XẢY RA THIỆT HẠI NHƯ VẬ
+ * ===================================================================
+ *
+ * Phần mềm này bao gồm những đóng góp tự nguyện từ nhiều người.
+ * các cá nhân thay mặt cho Tập đoàn Apache và ban đầu có trụ sở tại
+ * về phần mềm thuộc phạm vi công cộng được viết tại Trung tâm Quốc gia về
+ * Ứng dụng siêu máy tính, Đại học Illinois, Urbana-Champaign.
+ * Để biết thêm thông tin về Nhóm Apache và máy chủ HTTP Apache
+ * Để biết thêm chi tiết về dự án, vui lòng xem <http://www.apache.org/>.
+ *
+ */
+
+
