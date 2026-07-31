@@ -1,21 +1,7 @@
-import { pipeline } from "@xenova/transformers";
-
-let extractor;
+import { openaiProvider } from "../providers/openai.js";
 
 export async function embedding(text){
-
-if(!extractor){
-extractor=await pipeline(
-"feature-extraction",
-"Xenova/all-MiniLM-L6-v2"
-);
-}
-
-const out=await extractor(text,{
-pooling:"mean",
-normalize:true
-});
-
-return Array.from(out.data);
-
+  return await openaiProvider(
+    `Return ONLY a JSON array of 256 embedding numbers for:\n${text}`
+  );
 }
