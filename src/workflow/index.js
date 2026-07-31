@@ -4,6 +4,7 @@ import { setState,State } from "../state/index.js";
 import { runTests } from "../tester/index.js";
 import { review } from "../reviewer/index.js";
 import { commit } from "../committer/index.js";
+import { emitStage } from "../events/workflow.js";
 
 import { reviewTask } from "../agents/tasks/review.js";
 import { securityTask } from "../agents/tasks/security.js";
@@ -19,10 +20,12 @@ architecture:architectureTask
 
 export async function workflow(prompt){
 
+emitStage("planning");
 setState(State.PLANNING);
 
 const plan=createPlan(prompt);
 
+emitStage("executing");
 setState(State.EXECUTING);
 
 const result=await execute(
@@ -33,18 +36,21 @@ prompt
 
 await review(prompt);
 
+emitStage("testing");
 setState(State.TESTING);
 
 const ok=runTests();
 
 if(ok){
 
+emitStage("committing");
 setState(State.COMMITTING);
 
 commit();
 
 }
 
+emitStage("done");
 setState(State.DONE);
 
 return result;
