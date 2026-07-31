@@ -2,28 +2,39 @@ import { Router } from "express";
 import { router as ai } from "../router/index.js";
 import { db } from "../db/database.js";
 
-const r=Router();
+const r = Router();
 
-r.post("/",async(req,res)=>{
+const insert = db.prepare(`
+INSERT INTO chats(provider,prompt,response)
+VALUES(?,?,?)
+`);
 
-const prompt=req.body.message;
+const history = db.prepare(`
+SELECT *
+FROM chats
+ORDER BY id DESC
+LIMIT 100
+`);
 
-const response=await ai(prompt);
+r.post("/", async (req, res) => {
+  const prompt = req.body.message;
 
-db.run(
-"INSERT INTO chats(provider,prompt,response) VALUES(?,?,?)",
-[
-process.env.DEFAULT_MODEL,
-prompt,
-response
-]
-);
+  const response = await ai(prompt);
 
-res.json({
-success:true,
-response
+  insert.run(
+    process.env.DEFAULT_MODEL,
+    prompt,
+    response
+  );
+
+  res.json({
+    success: true,
+    response
+  });
 });
 
+r.get("/history", (req, res) => {
+  res.json(history.all());
 });
 
 export default r;
