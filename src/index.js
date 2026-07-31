@@ -1,7 +1,3 @@
-#!/usr/bin/env node
+import { runReview } from "./core/app.js";
 
-import { router } from "./router/index.js";
-
-const cmd = process.argv[2] || "chat";
-
-await router(cmd);
+await runReview();
