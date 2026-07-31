@@ -1,35 +1,31 @@
-import { openaiProvider } from "../providers/openai.js";
-import { claudeProvider } from "../providers/claude.js";
-import { geminiProvider } from "../providers/gemini.js";
-import { qwenProvider } from "../providers/qwen.js";
+import { createPlan } from "../planner/index.js";
 
-const providers={
-  openai:openaiProvider,
-  claude:claudeProvider,
-  gemini:geminiProvider,
-  qwen:qwenProvider
+import { reviewTask } from "../agents/tasks/review.js";
+import { securityTask } from "../agents/tasks/security.js";
+import { performanceTask } from "../agents/tasks/performance.js";
+import { architectureTask } from "../agents/tasks/architecture.js";
+
+const workers={
+review:reviewTask,
+security:securityTask,
+performance:performanceTask,
+architecture:architectureTask
 };
 
 export async function runAll(prompt){
 
-  const result={};
+const plan=createPlan(prompt);
 
-  await Promise.allSettled(
+const result={};
 
-    Object.entries(providers).map(async([name,fn])=>{
+await Promise.all(
 
-      try{
-        result[name]=await fn(prompt);
-      }catch(e){
-        result[name]={
-          error:e.message
-        };
-      }
+plan.map(async(job)=>{
+result[job.agent]=await workers[job.agent](prompt);
+})
 
-    })
+);
 
-  );
-
-  return result;
+return result;
 
 }
