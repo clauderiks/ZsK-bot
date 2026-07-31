@@ -1,11 +1,14 @@
 {
-  "name":"zsk-bot",
-  "private":true,
-  "type":"module",
-  "scripts":{
-    "dev":"node src/index.js",
-    "review":"node src/index.js review",
-    "chat":"node src/index.js chat",
-    "router":"node src/index.js router"
+  "name": "zsk-bot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js",
+    "review": "node src/index.js review",
+    "chat": "node src/index.js chat",
+    "router": "node src/index.js router"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }
