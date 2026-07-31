@@ -16,6 +16,7 @@
     "index": "node -e \"import('./src/rag/index.js').then(m=>m.indexRepo())\""
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
     "@google/genai": "^2.15.0",
     "@modelcontextprotocol/sdk": "^1.30.0",
     "@octokit/auth-action": "^6.0.2",
@@ -33,6 +34,7 @@
     "helmet": "^8.3.0",
     "jose": "^6.2.6",
     "morgan": "^1.11.0",
+    "openai": "^7.3.0",
     "prettier": "^3.9.6",
     "simple-git": "^3.36.0",
     "socket.io": "^4.8.3",
