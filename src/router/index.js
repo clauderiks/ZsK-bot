@@ -7,27 +7,36 @@ import { openaiProvider } from "../providers/openai.js";
 import { claudeProvider } from "../providers/claude.js";
 import { geminiProvider } from "../providers/gemini.js";
 import { qwenProvider } from "../providers/qwen.js";
+import { ohmabaProvider } from "../providers/ohmaba.js";
+import { zskProvider } from "../providers/zsk.js";
 
 const providers={
   openai:openaiProvider,
   claude:claudeProvider,
   gemini:geminiProvider,
-  qwen:qwenProvider
+  qwen:qwenProvider,
+  ohmaba:ohmabaProvider,
+  zsk:zskProvider
 };
 
-export async function router(prompt){
+export async function router(prompt, provider){
+  const targetProvider = provider || models.default;
 
-  if(models.default==="all"){
+  if(targetProvider === "all"){
     return await runAll(prompt);
   }
 
-  const result=await providers[models.default](prompt);
+  const providerFn = providers[targetProvider];
+  if(!providerFn){
+    throw new Error(`Unknown provider: ${targetProvider}`);
+  }
 
-bus.emit("ai",{
-model:models.default,
-response:result
-});
+  const result = await providerFn(prompt);
 
-return result;
+  bus.emit("ai",{
+    model: targetProvider,
+    response: result
+  });
 
+  return result;
 }

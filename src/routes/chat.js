@@ -18,11 +18,12 @@ LIMIT 100
 
 r.post("/", async (req, res) => {
   const prompt = req.body.message;
+  const provider = req.body.model || process.env.DEFAULT_MODEL;
 
-  const response = await ai(prompt);
+  const response = await ai(prompt, provider);
 
   insert.run(
-    process.env.DEFAULT_MODEL,
+    provider,
     prompt,
     response
   );

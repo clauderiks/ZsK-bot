@@ -1,114 +1,130 @@
 <div align="center">
 
-# [WatsonShell](https://zs-k-bot.vercel.app/) 
+# ZsK AI Bot
 
-
-**Giả lập terminal shell thông minh — tích hợp AI, đồng bộ đám mây và bảo mật 2FA**
+**AI host miễn phí và self-host miễn phí cho thử nghiệm — deploy nhanh lên Vercel và dùng local agent demo `zsk`.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)](https://vitejs.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![Firebase](https://img.shields.io/badge/Firebase-12-ffca28?logo=firebase&logoColor=black)](https://firebase.google.com)
+[![Vercel](https://img.shields.io/badge/Vercel-deploy-black?logo=vercel&logoColor=white)](https://vercel.com)
 
-[Demo](#-demo) · [Tính năng](#-tính-năng-nổi-bật) · [Cài đặt](#-cài-đặt-nhanh) · [Cấu trúc](#-cấu-trúc-dự-án) · [Đóng góp](#-đóng-góp)
+[Demo](#-demo) · [Tính năng](#-tính-năng-nổi-bật) · [Cài đặt](#-cài-đặt-nhanh) · [Deploy Vercel](#-deploy-lên-vercel) · [Cấu trúc](#-cấu-trúc-dự-án)
 
 </div>
 
 ---
 
-## 📖 Giới thiệu
+## 🚀 Tổng quan
 
-**Watson Shell** là một ứng dụng web mô phỏng một terminal / shell thông minh, kết hợp giao diện dòng lệnh cổ điển với sức mạnh của AI hiện đại. Dự án tích hợp **Gemini AI** để phân tích và gợi ý lệnh theo thời gian thực, đồng bộ dữ liệu qua **Cloudant Cloud Sync**, tô sáng cú pháp (syntax highlighting) cho nhiều ngôn ngữ lập trình, và cơ chế bảo mật hai lớp (2FA) — tất cả gói gọn trong một trải nghiệm terminal mượt mà, trực quan ngay trên trình duyệt.
+ZsK AI Bot là một dự án web React + TypeScript được xây dựng để chạy AI chat host miễn phí và self-host agent. Dự án lý tưởng cho thử nghiệm, demo và deploy nhanh lên Vercel.
 
-Ngoài ra, Watson Shell còn tích hợp sẵn các drawer kết nối nhanh tới hệ sinh thái Google (Docs, Tasks, Chat, Forms), một trình xem tài liệu RFC tích hợp, và khả năng xuất kết quả phiên làm việc ra PDF / Markdown / CSV.
+Ứng dụng hỗ trợ:
+
+- `zsk`: local free demo agent tích hợp sẵn để dùng ngay, không cần API key.
+- `ohmaba`: kết nối với endpoint custom cho self-host hoặc dịch vụ agent ngoài.
+- `Vercel`: frontend + serverless API hoạt động cùng nhau với cấu hình đã sẵn sàng.
+
+![Hero Image](assets/readme-hero.svg)
 
 ---
 
 ## ✨ Tính năng nổi bật
 
-| | Tính năng | Mô tả |
-|---|---|---|
-| 🧠 | **AI Engine tích hợp** | Phân tích lệnh, gợi ý tối ưu và phát hiện bất thường được hỗ trợ bởi Google Gemini (`@google/genai`) |
-| ☁️ | **Cloudant Cloud Sync** | Đồng bộ phiên làm việc, lịch sử lệnh và thiết bị theo thời gian thực |
-| 🔐 | **Bảo mật 2FA** | Xác thực hai lớp và mã hoá đầu-cuối cho phiên làm việc |
-| 🎨 | **Syntax Highlighting** | Tô màu cú pháp đa ngôn ngữ (JS, SQL, YAML, JSON, Rust, …) ngay trong terminal |
-| 📂 | **Project Tree Sidebar** | Duyệt cây thư mục dự án ảo, xem nội dung file trực tiếp |
-| 📊 | **Watson Analysis Panel** | Bảng phân tích song song hiển thị số liệu real-time (node efficiency, latency, độ tin cậy AI…) |
-| 📄 | **RFC Viewer** | Tra cứu và đọc nhanh các tài liệu RFC/tiêu chuẩn kỹ thuật ngay trong app |
-| 🔗 | **Tích hợp Google Workspace** | Drawer nhanh cho Google Docs, Tasks, Chat và Forms |
-| 📤 | **Export đa định dạng** | Xuất lịch sử phiên làm việc ra PDF, Markdown hoặc CSV chỉ với một cú click |
-| 🔔 | **Notifications & Device Sync** | Theo dõi trạng thái đồng bộ trên nhiều thiết bị (mobile, tablet, desktop) |
+- ✅ **Local free agent `zsk`**: chạy ngay mà không cần token hoặc endpoint bên ngoài.
+- ✅ **Self-host agent**: dùng `OHMABA_URL` để kết nối agent riêng hoặc dịch vụ không mất phí.
+- ✅ **Vercel-ready deployment**: `vercel.json` đã cấu hình route và build cho `api/chat`.
+- ✅ **React + Vite**: frontend hiện đại với proxy dev cho trải nghiệm mượt mà.
+- ✅ **Express API backend**: handle route chat trung tâm, chọn provider theo `model`.
+- ✅ **Môi trường linh hoạt**: `DEFAULT_MODEL`, `OHMABA_API_KEY`, `GEMINI_API_KEY`.
 
 ---
 
-## 🖥️ Demo
+## 🧠 Kiến trúc nhanh
 
-> Terminal ảo hiển thị lịch sử lệnh dạng JSON/Markdown/Table, đi kèm bảng phân tích Watson AI theo thời gian thực và cây thư mục dự án ở sidebar.
+![Architecture](assets/readme-architecture.svg)
 
-```
-$ watson run-analysis --db cloudant_prod --depth full
-✔ Connecting to IBM Cloudant instance...
-✔ Triggering Watson ML analysis pipeline...
-  → records_processed: 1,402,991
-  → anomalies_detected: 14
-  → ai_confidence: 0.992
-```
+- `src/` chứa frontend React và backend Express.
+- `src/providers/` chứa adapter provider cho AI hosts.
+- `src/routes/chat.js` xử lý request chat và chọn provider theo `model`.
+- `api/chat.js` là endpoint serverless dành cho Vercel.
+- `vercel.json` cấu hình build + route cho deployment.
 
 ---
 
-## 🧰 Công nghệ sử dụng
-
-- **Frontend:** [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
-- **Build tool:** [Vite 6](https://vitejs.dev)
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com)
-- **AI:** [Google Gemini API](https://ai.google.dev) (`@google/genai`)
-- **Backend/Cloud:** [Firebase](https://firebase.google.com) 12, Express
-- **Data & biểu đồ:** [Recharts](https://recharts.org)
-- **Animation:** [Motion](https://motion.dev)
-- **Icon:** [Lucide React](https://lucide.dev)
-
----
-
-## 🚀 Cài đặt nhanh
+## 🧰 Cài đặt nhanh
 
 ### Yêu cầu
 
 - Node.js `>= 18`
-- [Bun](https://bun.sh) hoặc `npm` / `yarn`
-- API key của Gemini ([lấy tại Google AI Studio](https://aistudio.google.com/))
+- `npm` hoặc `yarn`
 
-### Các bước
+### Chạy local
 
 ```bash
-# 1. Clone dự án
 git clone https://github.com/<your-username>/ZsK-bot.git
 cd ZsK-bot
-
-# 2. Cài đặt dependencies
 npm install
-# hoặc: bun install
-
-# 3. Thiết lập biến môi trường
 cp .env.example .env
-# → Mở file .env và điền GEMINI_API_KEY của bạn
+```
 
-# 4. Chạy môi trường phát triển
+Mở file `.env` và chỉnh cấu hình theo nhu cầu.
+
+```bash
+# 1) Chạy backend API
+npm run api
+
+# 2) Chạy frontend dev server
 npm run dev
 ```
 
-Ứng dụng sẽ chạy tại `http://localhost:3000`.
+Mở `http://localhost:5173` trong trình duyệt.
 
-### Các script có sẵn
+> Vite proxy `/api`, `/v1`, `/chat` tới backend API để chat hoạt động mượt mà.
+
+## ☁️ Deploy lên Vercel
+
+### 1. Cài Vercel CLI
+
+```bash
+npm install -g vercel
+```
+
+### 2. Kiểm tra `vercel.json`
+
+Project đã có `vercel.json`:
+
+- build static frontend từ `package.json`
+- build serverless `api/**/*.js`
+- routes `/api/*`, `/v1/chat`, `/chat`
+
+### 3. Thiết lập environment variables trên Vercel
+
+- `DEFAULT_MODEL=zsk` hoặc `ohmaba`
+- `OHMABA_URL` nếu dùng self-host agent
+- `OHMABA_API_KEY` khi cần
+- `GEMINI_API_KEY` nếu dùng Gemini
+
+### 4. Deploy
+
+```bash
+vercel --prod
+```
+
+Hoặc dùng GitHub integration để deploy tự động.
+
+---
+
+## 📦 Scripts hữu ích
 
 | Lệnh | Mô tả |
 |---|---|
-| `npm run dev` | Chạy server phát triển (hot reload) |
-| `npm run build` | Build bản production |
+| `npm run dev` | Chạy frontend dev server |
+| `npm run api` | Chạy backend Express API |
+| `npm run build` | Build production |
 | `npm run preview` | Xem trước bản build |
-| `npm run lint` | Kiểm tra type với TypeScript |
-| `npm run clean` | Xoá thư mục build |
+| `npm run lint` | Kiểm tra lint |
 
 ---
 
@@ -141,8 +157,38 @@ Tạo file `.env` từ `.env.example` với các biến sau:
 |---|---|
 | `GEMINI_API_KEY` | API key dùng để gọi Gemini AI |
 | `APP_URL` | URL nơi ứng dụng được host (dùng cho OAuth callback, self-reference) |
+| `OHMABA_URL` | URL endpoint cho ohmaba / self-hosted agent chat |
+| `OHMABA_API_KEY` | Token Bearer optional nếu endpoint ohmaba yêu cầu xác thực |
+| `DEFAULT_MODEL` | Provider mặc định: `openai`, `gemini`, `qwen`, `claude`, `ohmaba`, `zsk` |
 
 > ⚠️ **Lưu ý bảo mật:** Không commit file `.env` hoặc bất kỳ khoá API/cấu hình nhạy cảm nào (ví dụ `firebase-applet-config.json`) lên kho lưu trữ công khai.
+
+### Sử dụng ohmaba free
+- Thêm `OHMABA_URL` vào `.env` trỏ tới endpoint agent của bạn.
+- Nếu không cần token thì để `OHMABA_API_KEY` rỗng.
+- Set `DEFAULT_MODEL=ohmaba` để ứng dụng dùng provider này.
+
+Nếu bạn muốn host agent miễn phí, có hai cách phổ biến:
+1. Chạy local agent trên máy của bạn và đặt `OHMABA_URL=http://localhost:8080/api/chat`.
+2. Dùng một dịch vụ public hoặc Hugging Face Space có endpoint miễn phí, nếu có sẵn, rồi đặt `OHMABA_URL` vào đó.
+
+### Chạy local ZsK Free Agent
+
+Project đã có một local agent demo tên `zsk`:
+- `src/providers/zsk.js`
+- `src/ohmaba/localAgent.js`
+
+Nếu bạn chỉ muốn demo free agent ngay trong app mà không cần endpoint ngoài, set:
+
+```env
+DEFAULT_MODEL=zsk
+```
+
+Sau đó khởi động app và mọi lời gọi chat sẽ trả về phản hồi demo từ ZsK Free Agent.
+
+> Với cách này, bạn không cần `OHMABA_URL` hoặc token bất kỳ. Đây là phương án nhanh nhất để có "agent free" trên dự án.
+
+> Với cách self-host, bạn không mất token của OpenAI/Gemini nếu agent chạy trên máy bạn hoặc endpoint public không yêu cầu API key.
 
 ---
 

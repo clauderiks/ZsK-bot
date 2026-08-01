@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="36" fill="#07101C"/>
+  <rect x="86" y="86" width="328" height="180" rx="24" fill="#0F2134" stroke="#234D81" stroke-width="2"/>
+  <rect x="436" y="86" width="328" height="180" rx="24" fill="#0F2134" stroke="#234D81" stroke-width="2"/>
+  <rect x="786" y="86" width="328" height="180" rx="24" fill="#0F2134" stroke="#234D81" stroke-width="2"/>
+  <rect x="86" y="366" width="328" height="180" rx="24" fill="#0F2134" stroke="#234D81" stroke-width="2"/>
+  <rect x="436" y="366" width="328" height="180" rx="24" fill="#0F2134" stroke="#234D81" stroke-width="2"/>
+  <path d="M246 266V366" stroke="#18B3FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M586 266V366" stroke="#18B3FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M936 266V366" stroke="#18B3FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M250 166H414" stroke="#18B3FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M600 166H764" stroke="#18B3FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M950 166H1114" stroke="#18B3FF" stroke-width="4" stroke-linecap="round"/>
+  <text x="110" y="135" fill="#E0F3FF" font-size="24" font-family="Inter, sans-serif" font-weight="700">Frontend</text>
+  <text x="460" y="135" fill="#E0F3FF" font-size="24" font-family="Inter, sans-serif" font-weight="700">API / Server</text>
+  <text x="810" y="135" fill="#E0F3FF" font-size="24" font-family="Inter, sans-serif" font-weight="700">AI Host</text>
+  <text x="120" y="415" fill="#E0F3FF" font-size="24" font-family="Inter, sans-serif" font-weight="700">Vercel</text>
+  <text x="470" y="415" fill="#E0F3FF" font-size="24" font-family="Inter, sans-serif" font-weight="700">Database / Logs</text>
+  <rect x="98" y="168" width="116" height="28" rx="12" fill="#11273E"/>
+  <text x="114" y="186" fill="#7AC4FF" font-size="16" font-family="Inter, sans-serif">React UI</text>
+  <rect x="448" y="168" width="136" height="28" rx="12" fill="#11273E"/>
+  <text x="460" y="186" fill="#7AC4FF" font-size="16" font-family="Inter, sans-serif">Express API</text>
+  <rect x="798" y="168" width="164" height="28" rx="12" fill="#11273E"/>
+  <text x="810" y="186" fill="#7AC4FF" font-size="16" font-family="Inter, sans-serif">ZsK / Ohmaba</text>
+  <rect x="110" y="398" width="120" height="28" rx="12" fill="#11273E"/>
+  <text x="122" y="416" fill="#7AC4FF" font-size="16" font-family="Inter, sans-serif">Serverless</text>
+  <rect x="460" y="398" width="160" height="28" rx="12" fill="#11273E"/>
+  <text x="490" y="416" fill="#7AC4FF" font-size="16" font-family="Inter, sans-serif">SQLite / History</text>
+</svg>

@@ -10,6 +10,7 @@ import { SidebarWatsonAnalysis } from './components/SidebarWatsonAnalysis';
 import { TerminalOutput } from './components/TerminalOutput';
 import { TerminalInput } from './components/TerminalInput';
 import { TerminalPerformanceOverlay } from './components/TerminalPerformanceOverlay';
+import { AIChatPanel } from './components/AIChatPanel';
 import { AuthModal } from './components/AuthModal';
 import { NotificationsDrawer } from './components/NotificationsDrawer';
 import { GoogleTasksDrawer } from './components/GoogleTasksDrawer';
@@ -254,6 +255,7 @@ export default function App() {
   };
 
   const [activeNavTab, setActiveNavTab] = useState<'chat' | 'diff' | 'logs' | 'rfc'>('chat');
+  const [selectedModel, setSelectedModel] = useState<'zsk' | 'ohmaba' | 'openai' | 'gemini' | 'qwen' | 'claude'>('zsk');
 
   return (
     <div className="flex flex-col h-screen w-screen bg-black text-white font-sans overflow-hidden">
@@ -301,20 +303,25 @@ export default function App() {
           <div className="flex-1 flex overflow-hidden relative">
             {/* Terminal Main View */}
             <div className={`flex-1 flex flex-col h-full overflow-hidden ${mobileTab !== 'terminal' ? 'hidden lg:flex' : 'flex'}`}>
-              <TerminalOutput
-                history={history}
-                outputEndRef={outputEndRef}
-                aiConfidence={metrics.aiConfidence}
-                activeNavTab={activeNavTab}
-              />
-              <TerminalInput
-                onExecute={handleExecuteCommand}
-                onClear={handleClearTerminal}
-                onToggleGraph={() => handleExecuteCommand('watson run-analysis --db cloudant_prod')}
-                onToggleLogs={() => handleExecuteCommand('cat cloudant_v3_log.json')}
-                historyCommands={history.map(h => h.command)}
-                aiConfidence={metrics.aiConfidence}
-              />
+              <div className="hidden lg:block h-full">
+                <AIChatPanel selectedModel={selectedModel} onSelectModel={setSelectedModel} />
+              </div>
+              <div className="lg:hidden flex-1 flex flex-col h-full overflow-hidden">
+                <TerminalOutput
+                  history={history}
+                  outputEndRef={outputEndRef}
+                  aiConfidence={metrics.aiConfidence}
+                  activeNavTab={activeNavTab}
+                />
+                <TerminalInput
+                  onExecute={handleExecuteCommand}
+                  onClear={handleClearTerminal}
+                  onToggleGraph={() => handleExecuteCommand('watson run-analysis --db cloudant_prod')}
+                  onToggleLogs={() => handleExecuteCommand('cat cloudant_v3_log.json')}
+                  historyCommands={history.map(h => h.command)}
+                  aiConfidence={metrics.aiConfidence}
+                />
+              </div>
             </div>
 
 
