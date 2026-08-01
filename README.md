@@ -156,10 +156,22 @@ ZsK-bot-main/
 ├── content/actions/          # Tài liệu how-to
 ├── text/                       # Tài liệu tham khảo (RFC, spec...)
 ├── assets/                      # Tài nguyên tĩnh
+├── wiki/                       # Wiki nội bộ cho cài đặt, deploy, kiến trúc, logo
 ├── index.html
 ├── vite.config.ts
 └── package.json
 ```
+
+## 📚 Wiki nội bộ
+
+Project includes a repo-native wiki under `wiki/`:
+- `wiki/Home.md`
+- `wiki/Installation.md`
+- `wiki/Deployment.md`
+- `wiki/Architecture.md`
+- `wiki/Branding.md`
+
+Sử dụng các file này làm hướng dẫn nội bộ cho cài đặt, deploy và thương hiệu.
 
 ---
 
