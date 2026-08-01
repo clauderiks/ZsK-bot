@@ -2,6 +2,7 @@
 
 # ⌨️ [Watson Shell](https://zs-k-bot.vercel.app/) 
 
+
 **Giả lập terminal shell thông minh — tích hợp AI, đồng bộ đám mây và bảo mật 2FA**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
