@@ -2,6 +2,8 @@
 
 # ZsK AI Bot
 
+![ZsK AI Logo](assets/zsk-ai-logo.svg)
+
 **AI host miễn phí và self-host miễn phí cho thử nghiệm — deploy nhanh lên Vercel và dùng local agent demo `zsk`.**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
