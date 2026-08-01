@@ -33,6 +33,17 @@ ZsK AI Bot là một dự án web React + TypeScript được xây dựng để 
 
 > Nếu ảnh không hiển thị, mở trực tiếp: `./assets/readme-hero.svg`
 
+## 🤝 Nhà tài trợ
+
+<div align="center">
+  <img src="./assets/sponsor-1.svg" width="220" alt="ZsK Labs" />
+  <img src="./assets/sponsor-2.svg" width="220" alt="Chợ AI" />
+  <img src="./assets/sponsor-3.svg" width="220" alt="Nguồn" />
+  <img src="./assets/sponsor-4.svg" width="220" alt="Tài trợ" />
+</div>
+
+---
+
 ---
 
 ## ✨ Tính năng nổi bật

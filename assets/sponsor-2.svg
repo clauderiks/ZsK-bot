@@ -1,0 +1,6 @@
+<svg width="240" height="100" viewBox="0 0 240 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="100" rx="20" fill="#128C46"/>
+  <polygon points="50,26 90,50 50,74 18,50" fill="#00DB6A"/>
+  <circle cx="150" cy="50" r="20" fill="#F8FAFC"/>
+  <text x="100" y="62" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="18" font-weight="700">Chợ AI</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="240" height="100" viewBox="0 0 240 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="240" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8C4AFF"/>
+      <stop offset="1" stop-color="#F45FFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="100" rx="20" fill="url(#grad)"/>
+  <path d="M76 30H164C171.732 30 178 36.268 178 44V56C178 63.732 171.732 70 164 70H76C68.268 70 62 63.732 62 56V44C62 36.268 68.268 30 76 30Z" fill="#FFF" opacity="0.22"/>
+  <circle cx="120" cy="50" r="18" fill="#FFF"/>
+  <text x="96" y="68" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="16" font-weight="700">Tài trợ</text>
+</svg>

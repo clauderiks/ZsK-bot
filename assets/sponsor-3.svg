@@ -1,0 +1,6 @@
+<svg width="240" height="100" viewBox="0 0 240 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="100" rx="20" fill="#F88B1E"/>
+  <rect x="36" y="24" width="52" height="52" rx="14" fill="#FFC98F"/>
+  <rect x="96" y="32" width="44" height="36" rx="10" fill="#FFF"/>
+  <text x="152" y="62" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="18" font-weight="700">Nguồn</text>
+</svg>
