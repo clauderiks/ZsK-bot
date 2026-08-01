@@ -29,7 +29,9 @@ ZsK AI Bot là một dự án web React + TypeScript được xây dựng để 
 - `Vercel`: frontend + serverless API hoạt động cùng nhau với cấu hình đã sẵn sàng.
 - `Branding`: dynamic SVG logo cho ZsK AI tại `assets/zsk-ai-logo.svg`.
 
-![Hero Image](assets/readme-hero.svg)
+![Hero Image](./assets/readme-hero.svg)
+
+> Nếu ảnh không hiển thị, mở trực tiếp: `./assets/readme-hero.svg`
 
 ---
 
@@ -167,11 +169,11 @@ ZsK-bot-main/
 ## 📚 Wiki nội bộ
 
 Project includes a repo-native wiki under `wiki/`:
-- `wiki/Home.md`
-- `wiki/Installation.md`
-- `wiki/Deployment.md`
-- `wiki/Architecture.md`
-- `wiki/Branding.md`
+- [`wiki/Home.md`](wiki/Home.md)
+- [`wiki/Installation.md`](wiki/Installation.md)
+- [`wiki/Deployment.md`](wiki/Deployment.md)
+- [`wiki/Architecture.md`](wiki/Architecture.md)
+- [`wiki/Branding.md`](wiki/Branding.md)
 
 Sử dụng các file này làm hướng dẫn nội bộ cho cài đặt, deploy và thương hiệu.
 
