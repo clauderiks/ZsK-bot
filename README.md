@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⌨️ [WatsonShell](https://zs-k-bot.vercel.app/) 
+# ⌨️[WatsonShell](https://zs-k-bot.vercel.app/) 
 
 
 **Giả lập terminal shell thông minh — tích hợp AI, đồng bộ đám mây và bảo mật 2FA**
