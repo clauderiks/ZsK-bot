@@ -6,12 +6,12 @@
 
 **AI host miễn phí và self-host miễn phí cho thử nghiệm — deploy nhanh lên Vercel và dùng local agent demo `zsk`.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge&logo=apache&logoColor=white" alt="License" />
-  <img src="https://img.shields.io/badge/React-19-149eca?style=for-the-badge&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-5.8-3178c6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vite-6-646cff?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Vercel-deploy-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
+<p align="center" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+  <img src="./assets/badge-license.svg" width="260" alt="License Apache 2.0" />
+  <img src="./assets/badge-react.svg" width="220" alt="React" />
+  <img src="./assets/badge-typescript.svg" width="290" alt="TypeScript" />
+  <img src="./assets/badge-vite.svg" width="200" alt="Vite" />
+  <img src="./assets/badge-vercel.svg" width="230" alt="Vercel" />
 </p>
 
 [Demo](#-demo) · [Tính năng](#-tính-năng-nổi-bật) · [Cài đặt](#-cài-đặt-nhanh) · [Deploy Vercel](#-deploy-lên-vercel) · [Cấu trúc](#-cấu-trúc-dự-án)

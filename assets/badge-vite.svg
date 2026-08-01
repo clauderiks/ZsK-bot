@@ -1,0 +1,5 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="50" fill="#0F172A"/>
+  <text x="16" y="32" fill="#646CFF" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700">Vite</text>
+  <text x="80" y="32" fill="#E5E7EB" font-family="IBM Plex Sans, sans-serif" font-size="14">Fast</text>
+</svg>

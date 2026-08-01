@@ -1,0 +1,5 @@
+<svg width="230" height="50" viewBox="0 0 230 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="230" height="50" fill="#111827"/>
+  <text x="16" y="32" fill="#FFFFFF" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700">Vercel</text>
+  <text x="96" y="32" fill="#9CA3AF" font-family="IBM Plex Sans, sans-serif" font-size="14">Serverless</text>
+</svg>
