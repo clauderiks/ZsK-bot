@@ -8,3 +8,4 @@ coverage/
 !.env.example
 
 /src/generated/prisma
+.vercel
