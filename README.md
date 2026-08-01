@@ -1,262 +1,162 @@
-<div align="center">
+<div style="font-family:'IBM Plex Sans',sans-serif;background:#050B14;color:#E2E8F0;padding:32px;max-width:1000px;margin:auto;line-height:1.65;">
+  <section style="display:grid;gap:24px;">
+    <div style="padding:28px;background:#09101C;border:1px solid #1F2937;">
+      <h1 style="margin:0;font-size:3rem;letter-spacing:-0.04em;">ZsK AI Bot</h1>
+      <p style="margin:16px 0 0;color:#94A3B8;max-width:760px;">Minimal AI hosting and self-host agent demo with square-edge interface design, IBM-inspired dark surfaces, and clean RFC-style documentation structure. Designed for easy deployment, rapid local prototyping, and polished documentation.</p>
+    </div>
 
-# ZsK AI Bot
+    <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
+      <a href="#quick-links" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Quick Links</a>
+      <a href="#features" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Features</a>
+      <a href="#install" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Install</a>
+      <a href="./wiki/Home.md" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Wiki</a>
+    </div>
 
-![ZsK AI Logo](assets/zsk-ai-logo.svg)
+    <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));">
+      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
+        <strong style="display:block;color:#E2E8F0;">License</strong>
+        <span style="color:#94A3B8;">Apache 2.0</span>
+      </div>
+      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
+        <strong style="display:block;color:#E2E8F0;">React</strong>
+        <span style="color:#94A3B8;">Modern UI</span>
+      </div>
+      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
+        <strong style="display:block;color:#E2E8F0;">TypeScript</strong>
+        <span style="color:#94A3B8;">Strict</span>
+      </div>
+      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
+        <strong style="display:block;color:#E2E8F0;">Vite</strong>
+        <span style="color:#94A3B8;">Fast build</span>
+      </div>
+      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
+        <strong style="display:block;color:#E2E8F0;">Vercel</strong>
+        <span style="color:#94A3B8;">Serverless</span>
+      </div>
+    </div>
 
-**AI host miễn phí và self-host miễn phí cho thử nghiệm — deploy nhanh lên Vercel và dùng local agent demo `zsk`.**
+    <div style="padding:20px;background:#09101C;border:1px solid #1F2937;">
+      <img src="./assets/readme-hero.svg" alt="Hero panel" style="width:100%;display:block;border:1px solid #1F2937;" />
+      <p style="margin:14px 0 0;color:#94A3B8;font-size:0.95rem;">Hero panel preview. If the image does not render, open <code style="color:#E2E8F0;background:#0F172A;padding:2px 4px;border:1px solid #1F2937;">./assets/readme-hero.svg</code>.</p>
+    </div>
 
-<p align="center" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-  <img src="./assets/badge-license.svg" width="260" alt="License Apache 2.0" />
-  <img src="./assets/badge-react.svg" width="220" alt="React" />
-  <img src="./assets/badge-typescript.svg" width="290" alt="TypeScript" />
-  <img src="./assets/badge-vite.svg" width="200" alt="Vite" />
-  <img src="./assets/badge-vercel.svg" width="230" alt="Vercel" />
-</p>
+    <div style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+      <a href="./assets/sponsor-1.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 1</a>
+      <a href="./assets/sponsor-2.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 2</a>
+      <a href="./assets/sponsor-3.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 3</a>
+      <a href="./assets/sponsor-4.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 4</a>
+    </div>
+  </div>
+</section>
 
-[Demo](#-demo) · [Tính năng](#-tính-năng-nổi-bật) · [Cài đặt](#-cài-đặt-nhanh) · [Deploy Vercel](#-deploy-lên-vercel) · [Cấu trúc](#-cấu-trúc-dự-án)
+<section id="quick-links" style="margin-top:34px;display:grid;gap:18px;">
+  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
+    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Quick links</h2>
+    <div style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+      <a href="#features" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Features</a>
+      <a href="#install" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Install</a>
+      <a href="#deployment" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Deploy</a>
+      <a href="./wiki/Home.md" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Wiki</a>
+    </div>
+  </div>
+</section>
 
-</div>
+<section id="features" style="margin-top:34px;display:grid;gap:18px;">
+  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
+    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Features</h2>
+    <div style="display:grid;gap:12px;">
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Local free agent</strong>
+        <span style="color:#94A3B8;">`zsk` runs locally without external API keys.</span>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Self-host adapter</strong>
+        <span style="color:#94A3B8;">`OHMABA_URL` connects to your self-hosted or external agent endpoint.</span>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Vercel-ready</strong>
+        <span style="color:#94A3B8;">Serverless API and frontend deployment configured.</span>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Modern stack</strong>
+        <span style="color:#94A3B8;">React, TypeScript, Vite, and Express with clean doc structure.</span>
+      </div>
+    </div>
+  </div>
+</section>
 
----
-
-## 🚀 Tổng quan
-
-ZsK AI Bot là một dự án web React + TypeScript được xây dựng để chạy AI chat host miễn phí và self-host agent. Dự án lý tưởng cho thử nghiệm, demo và deploy nhanh lên Vercel.
-
-Ứng dụng hỗ trợ:
-
-- `zsk`: local free demo agent tích hợp sẵn để dùng ngay, không cần API key.
-- `ohmaba`: kết nối với endpoint custom cho self-host hoặc dịch vụ agent ngoài.
-- `Vercel`: frontend + serverless API hoạt động cùng nhau với cấu hình đã sẵn sàng.
-- `Branding`: dynamic SVG logo cho ZsK AI tại `assets/zsk-ai-logo.svg`.
-
-![Hero Image](./assets/readme-hero.svg)
-
-> Nếu ảnh không hiển thị, mở trực tiếp: `./assets/readme-hero.svg`
-
-## 🤝 Nhà tài trợ
-
-<div align="center">
-  <img src="./assets/sponsor-1.svg" width="220" alt="ZsK Labs" />
-  <img src="./assets/sponsor-2.svg" width="220" alt="Chợ AI" />
-  <img src="./assets/sponsor-3.svg" width="220" alt="Nguồn" />
-  <img src="./assets/sponsor-4.svg" width="220" alt="Tài trợ" />
-</div>
-
----
-
----
-
-## ✨ Tính năng nổi bật
-
-- ✅ **Local free agent `zsk`**: chạy ngay mà không cần token hoặc endpoint bên ngoài.
-- ✅ **Self-host agent**: dùng `OHMABA_URL` để kết nối agent riêng hoặc dịch vụ không mất phí.
-- ✅ **Vercel-ready deployment**: `vercel.json` đã cấu hình route và build cho `api/chat`.
-- ✅ **React + Vite**: frontend hiện đại với proxy dev cho trải nghiệm mượt mà.
-- ✅ **Express API backend**: handle route chat trung tâm, chọn provider theo `model`.
-- ✅ **Môi trường linh hoạt**: `DEFAULT_MODEL`, `OHMABA_API_KEY`, `GEMINI_API_KEY`.
-
----
-
-## 🧠 Kiến trúc nhanh
-
-![Architecture](assets/readme-architecture.svg)
-
-- `src/` chứa frontend React và backend Express.
-- `src/providers/` chứa adapter provider cho AI hosts.
-- `src/routes/chat.js` xử lý request chat và chọn provider theo `model`.
-- `api/chat.js` là endpoint serverless dành cho Vercel.
-- `vercel.json` cấu hình build + route cho deployment.
-
----
-
-## 🧰 Cài đặt nhanh
-
-### Yêu cầu
-
-- Node.js `>= 18`
-- `npm` hoặc `yarn`
-
-### Chạy local
-
-```bash
-git clone https://github.com/<your-username>/ZsK-bot.git
+<section id="install" style="margin-top:34px;display:grid;gap:18px;">
+  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
+    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Install</h2>
+    <div style="display:grid;gap:14px;">
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Prerequisites</strong>
+        <span style="color:#94A3B8;">Node.js >= 18, npm or yarn.</span>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Setup</strong>
+        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">git clone https://github.com/clauderiks/ZsK-bot.git
 cd ZsK-bot
 npm install
-cp .env.example .env
-```
+cp .env.example .env</pre>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Run local</strong>
+        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">npm run api
+npm run dev</pre>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Concurrent</strong>
+        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">npx concurrently "npm run api" "npm run dev"</pre>
+      </div>
+    </div>
+  </div>
+</section>
 
-Mở file `.env` và chỉnh cấu hình theo nhu cầu.
+<section id="deployment" style="margin-top:34px;display:grid;gap:18px;">
+  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
+    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Deployment</h2>
+    <div style="display:grid;gap:14px;">
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Vercel</strong>
+        <span style="color:#94A3B8;">Deploy the app with the existing <code style="color:#E2E8F0;background:#08121F;padding:2px 4px;border:1px solid #1F2937;">vercel.json</code> config.</span>
+        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">vercel --prod</pre>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Env variables</strong>
+        <ul style="margin:12px 0 0 20px;color:#CBD5E1;">
+          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">DEFAULT_MODEL</code></li>
+          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">OHMABA_URL</code></li>
+          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">OHMABA_API_KEY</code></li>
+          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">GEMINI_API_KEY</code></li>
+        </ul>
+      </div>
+      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
+        <strong style="color:#E2E8F0;display:block;">Hugging Face Space</strong>
+        <span style="color:#94A3B8;">Push the <code style="color:#E2E8F0;background:#08121F;padding:2px 4px;border:1px solid #1F2937;">huggingface-space-kimi-demo/</code> folder to a Space and add <code style="color:#E2E8F0;background:#08121F;padding:2px 4px;border:1px solid #1F2937;">HF_TOKEN</code> if needed.</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-```bash
-# 1) Chạy backend API
-npm run api
-
-# 2) Chạy frontend dev server
-npm run dev
-```
-
-Hoặc chạy cả frontend và backend cùng lúc bằng `npx`:
-
-```bash
-npx concurrently "npm run api" "npm run dev"
-```
-
-Nếu muốn chỉ chạy frontend hoặc backend riêng:
-
-```bash
-npx vite
-npx node src/server/index.js
-```
-
-Mở `http://localhost:5173` trong trình duyệt.
-
-> Vite proxy `/api`, `/v1`, `/chat` tới backend API để chat hoạt động mượt mà.
-
-## ☁️ Deploy lên Vercel
-
-### 1. Cài Vercel CLI
-
-```bash
-npm install -g vercel
-```
-
-### 2. Kiểm tra `vercel.json`
-
-Project đã có `vercel.json`:
-
-- build static frontend từ `package.json`
-- build serverless `api/**/*.js`
-- routes `/api/*`, `/v1/chat`, `/chat`
-
-### 3. Thiết lập environment variables trên Vercel
-
-- `DEFAULT_MODEL=zsk` hoặc `ohmaba`
-- `OHMABA_URL` nếu dùng self-host agent
-- `OHMABA_API_KEY` khi cần
-- `GEMINI_API_KEY` nếu dùng Gemini
-
-### 4. Deploy
-
-```bash
-vercel --prod
-```
-
-Hoặc dùng GitHub integration để deploy tự động.
-
----
-
-## 📦 Scripts hữu ích
-
-| Lệnh | Mô tả |
-|---|---|
-| `npm run dev` | Chạy frontend dev server |
-| `npm run api` | Chạy backend Express API |
-| `npm run build` | Build production |
-| `npm run preview` | Xem trước bản build |
-| `npm run lint` | Kiểm tra lint |
-
----
-
-## 📁 Cấu trúc dự án
-
-```
-ZsK-bot-main/
+<section style="margin-top:34px;display:grid;gap:18px;">
+  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
+    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Project structure</h2>
+    <pre style="background:#08121F;color:#E2E8F0;padding:16px;border:1px solid #1F2937;overflow:auto;">ZsK-bot-main/
 ├── src/
-│   ├── components/         # Các UI component (Terminal, Drawer, Modal, Sidebar...)
-│   ├── utils/               # Logic xử lý: Watson Engine, Google Auth, Export...
-│   ├── types/                # Định nghĩa kiểu dữ liệu TypeScript
-│   ├── App.tsx               # Component gốc, quản lý state toàn cục
-│   ├── main.tsx               # Entry point
-│   └── index.css               # Global styles (Tailwind)
-├── content/actions/          # Tài liệu how-to
-├── text/                       # Tài liệu tham khảo (RFC, spec...)
-├── assets/                      # Tài nguyên tĩnh
-├── wiki/                       # Wiki nội bộ cho cài đặt, deploy, kiến trúc, logo
+│   ├── components/         # UI components
+│   ├── utils/               # app logic utilities
+│   ├── types/               # TypeScript definitions
+│   ├── App.tsx              # main app component
+│   ├── main.tsx             # entry point
+│   └── index.css            # styles
+├── content/actions/         # how-to docs
+├── text/                    # reference docs
+├── assets/                  # static assets
+├── wiki/                    # internal wiki docs
 ├── index.html
 ├── vite.config.ts
-└── package.json
-```
-
-## 📚 Wiki nội bộ
-
-Project includes a repo-native wiki under `wiki/`:
-- [`wiki/Home.md`](wiki/Home.md)
-- [`wiki/Installation.md`](wiki/Installation.md)
-- [`wiki/Deployment.md`](wiki/Deployment.md)
-- [`wiki/Architecture.md`](wiki/Architecture.md)
-- [`wiki/Branding.md`](wiki/Branding.md)
-
-Sử dụng các file này làm hướng dẫn nội bộ cho cài đặt, deploy và thương hiệu.
-
----
-
-## ⚙️ Cấu hình môi trường
-
-Tạo file `.env` từ `.env.example` với các biến sau:
-
-| Biến | Mô tả |
-|---|---|
-| `GEMINI_API_KEY` | API key dùng để gọi Gemini AI |
-| `APP_URL` | URL nơi ứng dụng được host (dùng cho OAuth callback, self-reference) |
-| `OHMABA_URL` | URL endpoint cho ohmaba / self-hosted agent chat |
-| `OHMABA_API_KEY` | Token Bearer optional nếu endpoint ohmaba yêu cầu xác thực |
-| `DEFAULT_MODEL` | Provider mặc định: `openai`, `gemini`, `qwen`, `claude`, `ohmaba`, `zsk` |
-
-> ⚠️ **Lưu ý bảo mật:** Không commit file `.env` hoặc bất kỳ khoá API/cấu hình nhạy cảm nào (ví dụ `firebase-applet-config.json`) lên kho lưu trữ công khai.
-
-### Sử dụng ohmaba free
-- Thêm `OHMABA_URL` vào `.env` trỏ tới endpoint agent của bạn.
-- Nếu không cần token thì để `OHMABA_API_KEY` rỗng.
-- Set `DEFAULT_MODEL=ohmaba` để ứng dụng dùng provider này.
-
-Nếu bạn muốn host agent miễn phí, có hai cách phổ biến:
-1. Chạy local agent trên máy của bạn và đặt `OHMABA_URL=http://localhost:8080/api/chat`.
-2. Dùng một dịch vụ public hoặc Hugging Face Space có endpoint miễn phí, nếu có sẵn, rồi đặt `OHMABA_URL` vào đó.
-
-### Chạy local ZsK Free Agent
-
-Project đã có một local agent demo tên `zsk`:
-- `src/providers/zsk.js`
-- `src/ohmaba/localAgent.js`
-
-Nếu bạn chỉ muốn demo free agent ngay trong app mà không cần endpoint ngoài, set:
-
-```env
-DEFAULT_MODEL=zsk
-```
-
-Sau đó khởi động app và mọi lời gọi chat sẽ trả về phản hồi demo từ ZsK Free Agent.
-
-> Với cách này, bạn không cần `OHMABA_URL` hoặc token bất kỳ. Đây là phương án nhanh nhất để có "agent free" trên dự án.
-
-> Với cách self-host, bạn không mất token của OpenAI/Gemini nếu agent chạy trên máy bạn hoặc endpoint public không yêu cầu API key.
-
----
-
-## 🤝 Đóng góp
-
-Mọi đóng góp đều được chào đón! Để đóng góp:
-
-1. Fork dự án
-2. Tạo nhánh tính năng (`git checkout -b feature/ten-tinh-nang`)
-3. Commit thay đổi (`git commit -m 'Thêm tính năng abc'`)
-4. Push lên nhánh (`git push origin feature/ten-tinh-nang`)
-5. Mở một Pull Request
-
-Vui lòng tạo issue trước nếu bạn muốn thảo luận về thay đổi lớn.
-
----
-
-## 📜 Giấy phép
-
-Dự án được phát hành theo giấy phép **Apache-2.0**. Xem chi tiết tại [LICENSE](LICENSE).
-
----
-
-<div align="center">
-
-Made with ❤️ bằng React & TypeScript
-
+└── package.json</pre>
+  </div>
+</section>
 </div>
