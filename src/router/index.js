@@ -10,33 +10,38 @@ import { qwenProvider } from "../providers/qwen.js";
 import { ohmabaProvider } from "../providers/ohmaba.js";
 import { zskProvider } from "../providers/zsk.js";
 
-const providers={
-  openai:openaiProvider,
-  claude:claudeProvider,
-  gemini:geminiProvider,
-  qwen:qwenProvider,
-  ohmaba:ohmabaProvider,
-  zsk:zskProvider
+const providers = {
+  openai: openaiProvider,
+  claude: claudeProvider,
+  gemini: geminiProvider,
+  qwen: qwenProvider,
+  ohmaba: ohmabaProvider,
+  zsk: zskProvider
 };
 
-export async function router(prompt, provider){
+export async function router(prompt, provider) {
   const targetProvider = provider || models.default;
 
-  if(targetProvider === "all"){
+  if (targetProvider === "all") {
     return await runAll(prompt);
   }
 
   const providerFn = providers[targetProvider];
-  if(!providerFn){
+  if (!providerFn) {
     throw new Error(`Unknown provider: ${targetProvider}`);
   }
 
-  const result = await providerFn(prompt);
+  try {
+    const result = await providerFn(prompt);
 
-  bus.emit("ai",{
-    model: targetProvider,
-    response: result
-  });
+    bus.emit("ai", {
+      model: targetProvider,
+      response: result
+    });
 
-  return result;
+    return result;
+  } catch (error) {
+    console.error(`Provider ${targetProvider} failed:`, error);
+    return `Provider ${targetProvider} is currently unavailable. Please try another provider.`;
+  }
 }
