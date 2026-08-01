@@ -25,6 +25,7 @@ ZsK AI Bot là một dự án web React + TypeScript được xây dựng để 
 - `zsk`: local free demo agent tích hợp sẵn để dùng ngay, không cần API key.
 - `ohmaba`: kết nối với endpoint custom cho self-host hoặc dịch vụ agent ngoài.
 - `Vercel`: frontend + serverless API hoạt động cùng nhau với cấu hình đã sẵn sàng.
+- `Branding`: dynamic SVG logo cho ZsK AI tại `assets/zsk-ai-logo.svg`.
 
 ![Hero Image](assets/readme-hero.svg)
 
@@ -77,6 +78,19 @@ npm run api
 
 # 2) Chạy frontend dev server
 npm run dev
+```
+
+Hoặc chạy cả frontend và backend cùng lúc bằng `npx`:
+
+```bash
+npx concurrently "npm run api" "npm run dev"
+```
+
+Nếu muốn chỉ chạy frontend hoặc backend riêng:
+
+```bash
+npx vite
+npx node src/server/index.js
 ```
 
 Mở `http://localhost:5173` trong trình duyệt.
