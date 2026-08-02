@@ -1,0 +1,65 @@
+# Comptes d’entreprise
+
+Commencez à utiliser l’administration de haut en bas en comprenant les composants clés d’un compte d’entreprise.
+
+Un compte d’entreprise est le point central d’administration de votre entreprise sur GitHub. Il réunit des outils d’administration pour la gestion des accès, les stratégies, la facturation, etc. Les administrateurs d’entreprise peuvent configurer efficacement des fonctionnalités et des stratégies à grande échelle avant de les déployer dans l’entreprise.
+
+Ce guide fournit une vue d’ensemble des principales fonctionnalités administratives incluses dans un compte d’entreprise. En comprenant les outils à votre disposition, vous serez en mesure de vous adapter GitHub à vos besoins uniques, de configurer votre entreprise pour une mise à l’échelle future et de permettre aux équipes de se concentrer sur le travail stratégique.
+
+## Users
+
+Votre entreprise contient tous les utilisateurs qui doivent accéder à n’importe quelle partie des ressources de votre entreprise sur GitHub. Les utilisateurs peuvent être regroupés en équipes et avoir accès aux organisations.
+
+Selon votre type d’entreprise, vous allez inviter des utilisateurs dans votre entreprise avec leur compte existant GitHub ou approvisionner des comptes dédiés à partir d’un fournisseur d’identité central.
+
+Par défaut, la plupart des utilisateurs ont un rôle non administratif dans votre entreprise, ce qui signifie qu’ils ont peu de raisons d’interagir avec le compte d’entreprise lui-même. Toutefois, vous pouvez le modifier en accordant des rôles d’entreprise qui fournissent l’accès à des paramètres spécifiques.
+
+## Organisations
+
+Un compte d’entreprise peut contenir une ou plusieurs organisations. Comme un compte d’entreprise, un compte d’organisation contient ses propres fonctionnalités d’administration telles que les journaux d’audit, les stratégies et les équipes.
+
+Une organisation contient également les endroits où les non-administrateurs effectuent généralement leur travail, tels que les dépôts, les discussions et les projets. Les utilisateurs d’une organisation sont les personnes qui doivent accéder à ces lieux pour effectuer leurs tâches.
+
+En règle générale, vous pouvez régir les organisations de manière cohérente à partir de votre compte d’entreprise. Pour permettre une administration plus personnalisée et granulaire, vous pouvez également déléguer certaines décisions, telles que les paramètres de stratégie, aux administrateurs de l’organisation.
+
+## Équipes
+
+Les équipes sont des groupes d’utilisateurs que vous pouvez utiliser pour gérer l’accès des personnes aux organisations, aux rôles et aux licences à grande échelle. Vous pouvez utiliser des équipes pour ajouter des personnes à des projets partagés ou déléguer des tâches à des équipes spécialisées.
+
+Vous pouvez définir des équipes au niveau de l’entreprise, puis leur accorder des rôles d’administration ou les ajouter à des organisations, où elles peuvent recevoir des rôles et un accès au référentiel au niveau de l’organisation.
+
+Teams peut être synchronisé avec des groupes IdP, ce qui vous permet de gérer tous les privilèges fournis avec l’appartenance à l’équipe directement à partir du système de gestion des identités centralisé de votre entreprise.
+
+## Référentiels
+
+Les dépôts hébergent des fichiers tels que le code source de votre entreprise ou la documentation interne. Ils sont là où les développeurs effectuent généralement leur travail et contiennent leurs propres fonctionnalités et options d’administration qui doivent vivre plus près du code, comme GitHub Actions les flux de travail.
+
+Les dépôts sont détenus par les organisations et ne sont pas directement accessibles sous le compte d’entreprise. Toutefois, votre entreprise peut définir des propriétés personnalisées pour appliquer le même modèle de gouvernance à tous les référentiels avec des caractéristiques partagées.
+Par exemple, si vous ne souhaitez pas que personne supprime des référentiels qui contiennent du code de production, il s’agit d’un élément que vous pouvez régir au niveau de l’entreprise.
+
+## Centres de coût
+
+Les centres de coûts vous permettent d’allouer des dépenses sur GitHub des fonctionnalités à des unités commerciales spécifiques. Ils vous permettent de définir votre structure de facturation indépendamment des autres parties de l’entreprise. Vous pouvez donc vous concentrer sur l’utilisation de comptes d’organisation pour regrouper les exigences de travail ou de gouvernance associées.
+
+Si votre compte est facturé via Azure, les centres de coûts vous permettent également de facturer l’utilisation à plusieurs abonnements Azure différents.
+
+## Policies
+
+Les administrateurs d’entreprise peuvent définir des stratégies pour régir le fonctionnement des personnes dans votre entreprise, telles que :
+
+* Listes d’autorisation IP pour appliquer des restrictions sur l’endroit où les personnes peuvent accéder à votre entreprise
+* Copilot stratégies pour régir les fonctionnalités et les modèles que les utilisateurs peuvent utiliser
+* Stratégies de référentiel pour contrôler qui peut effectuer des opérations telles que la suppression, le renommage ou le transfert de référentiels
+* Ensembles de règles pour définir comment les utilisateurs peuvent interagir avec des branches importantes, comme l'exigence de demandes de tirage accompagnées de révisions
+
+## Apps
+
+GitHub Apps sont un moyen sécurisé de gérer les automatisations au sein de votre entreprise. Il GitHub App s’agit d’une identité dédiée qui fournit des jetons étendus à vos scripts et flux de travail externes, ce qui vous permet d’automatiser les processus et d’intégrer d’autres plateformes.
+
+Dans votre compte d’entreprise, vous pouvez définir des inscriptions d’applications pour automatiser un processus de manière cohérente entre les organisations. Vous pouvez également installer des applications pour les automatisations qui prennent des mesures sur le compte d’entreprise lui-même, telles que la création d’organisations.
+
+Les utilisateurs peuvent également autoriser GitHub Apps à utiliser leur GitHub compte et leurs données dans d’autres applications, par exemple pour utiliser leur GitHub compte pour se connecter à un IDE ou connecter un fournisseur CI à vos référentiels.
+
+## Étapes suivantes
+
+Découvrez comment configurer ces fonctionnalités avec notre parcours [Intégration d’entreprise](/fr/enterprise-cloud@latest/enterprise-onboarding) pour GitHub Enterprise Cloud.
