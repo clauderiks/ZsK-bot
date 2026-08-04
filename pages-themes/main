@@ -1,0 +1,107 @@
+# Ajout d’un thème à votre site GitHub Pages à l’aide de Jekyll
+
+Vous pouvez personnaliser votre site Jekyll en ajoutant et en personnalisant un thème.
+
+> \[!NOTE] Bien que la gemme `github-pages` soit toujours pris en charge pour certains workflows, GitHub Actions est désormais l'approche recommandée pour déployer et automatiser les sites GitHub Pages.
+
+Les personnes disposant d’autorisations en écriture sur un dépôt peuvent ajouter un thème à un site GitHub Pages avec Jekyll.
+
+Si vous publiez à partir d'une branche, les modifications apportées à votre site sont publiées automatiquement lorsqu'elles sont fusionnées dans la source de publication de votre site. Si vous publiez à partir d'un flux de travail personnalisé GitHub Actions, les modifications sont publiées chaque fois que votre flux de travail est déclenché (généralement par une poussée vers la branche par défaut). Si vous souhaitez prévisualiser vos modifications, vous pouvez les effectuer localement plutôt que sur GitHub. Ensuite, testez votre site localement. Pour plus d’informations, consultez « [Test de votre site GitHub Pages localement avec Jekyll](/fr/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) ».
+
+## Thèmes pris en charge
+
+Les thèmes suivants sont pris en charge dès l’installation :
+
+* [Architect](https://github.com/pages-themes/architect)
+* [Cayman](https://github.com/pages-themes/cayman)
+* [Dinky](https://github.com/pages-themes/dinky)
+* [Hacker](https://github.com/pages-themes/hacker)
+* [Jour bissextile](https://github.com/pages-themes/leap-day)
+* [Merlot](https://github.com/pages-themes/merlot)
+* [Midnight](https://github.com/pages-themes/midnight)
+* [Minima](https://github.com/jekyll/minima)
+* ```
+            [Minimal](https://github.com/pages-themes/minimal)
+  ```
+* [Modernist](https://github.com/pages-themes/modernist)
+* [Slate](https://github.com/pages-themes/slate)
+* [Tactile](https://github.com/pages-themes/tactile)
+* [Machine à voyager dans le temps](https://github.com/pages-themes/time-machine)
+
+Le plug-in Jekyll [`jekyll-remote-theme`](https://github.com/benbalter/jekyll-remote-theme) est également disponible et vous permet de charger d’autres thèmes.
+
+## Ajout d’un thème
+
+1. Dans GitHub, accédez au dépôt de votre site.
+
+2. Accédez à la source de publication pour votre site. Pour plus d’informations, consultez « [Configuration d’une source de publication pour votre site GitHub Pages](/fr/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) ».
+
+3. Accédez à `_config.yml`.
+
+4. En haut à droite de la vue de fichier, cliquez sur <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-pencil" aria-label="Edit file" role="img"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg> pour ouvrir l’éditeur de fichier.
+   ![Capture d’écran d’un fichier. Dans l’en-tête, un bouton avec une icône de crayon est indiqué en orange foncé.](/assets/images/help/repository/edit-file-edit-button.png)
+
+   > \[!NOTE]
+   > Au lieu d'éditer et de valider le fichier en utilisant l'éditeur de fichiers par défaut, vous pouvez choisir d'utiliser [l'éditeur de code de github.dev](/fr/codespaces/the-githubdev-web-based-editor) en sélectionnant le menu déroulant <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-label=" More edit options " role="img"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg> et en cliquant sur **github.dev**. Vous pouvez également cloner le référentiel et modifier le fichier localement via GitHub Desktop en cliquant sur **GitHub Desktop** .
+   >
+   > ![Capture d’écran d’un fichier. Dans l’en-tête, une icône de triangle orientée vers le bas est indiquée en orange foncé.](/assets/images/help/repository/edit-file-edit-dropdown.png)
+
+5. Ajoutez une nouvelle ligne au fichier pour le nom du thème.
+   * Pour utiliser un thème pris en charge, tapez `theme: THEME-NAME`, en remplaçant THEME-NAME par le nom du thème tel qu’il apparaît dans le `_config.yml` du référentiel thème (la plupart des thèmes suivent une convention d’affectation de noms `jekyll-theme-NAME`). Pour obtenir la liste des thèmes pris en charge, consultez [Thèmes pris en charge](/fr/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#supported-themes) sur le site GitHub Pages. Par exemple, pour sélectionner le thème Minimal, tapez `theme: jekyll-theme-minimal`.
+   * Pour utiliser n’importe quel autre thème Jekyll hébergé sur GitHub, tapez `remote_theme: THEME-NAME`, en remplaçant THEME-NAME par le nom du thème tel qu’il apparaît dans le README du dépôt du thème.
+
+6. Cliquez sur **Commiter les changements**.
+
+7. Dans le champ de message de validation, tapez un message de validation court et descriptif qui indique la modification que vous avez apportée au fichier. Vous pouvez attribuer la validation à plusieurs auteurs dans le message de validation. Pour plus d’informations, consultez « [Créer un commit avec plusieurs auteurs ou au nom d’une organisation](/fr/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) ».
+
+8. Si vous avez plusieurs adresses e-mail associées à votre compte GitHub, cliquez sur le menu déroulant de l’adresse e-mail et sélectionnez l’adresse e-mail à utiliser comme adresse e-mail de l’auteur Git. Seules les adresses e-mail vérifiées apparaissent dans ce menu déroulant. Si vous avez activé la confidentialité de l’adresse e-mail, le mode sans réponse sera utilisé par défaut pour l’adresse e-mail de l’auteur de commit. Pour plus d’informations sur la forme exacte que l’adresse e-mail sans réponse peut prendre, consultez [Définition de votre adresse e-mail de commit](/fr/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address).
+
+![Capture d’écran d’une pull request GitHub affichant un menu déroulant avec des options permettant de choisir l’adresse e-mail de l’auteur du commit.
+octocat@github.com est sélectionné.](/assets/images/help/repository/choose-commit-email-address.png)
+
+1. Sous les champs de message de commit, choisissez si vous souhaitez ajouter votre commit à la branche actuelle ou à une nouvelle branche. Si votre branche actuelle est la branche par défaut, vous devez choisir de créer une branche pour votre validation, puis de créer une demande de tirage (pull request). Pour plus d’informations, consultez « [Création d’une pull request](/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ».
+
+   ![Capture d’écran d’une demande de tirage GitHub montrant une case d’option permettant de commiter directement dans la branche main ou de créer une branche. Une nouvelle branche est sélectionnée.](/assets/images/help/repository/choose-commit-branch.png)
+2. Cliquez sur **Valider les modifications** ou **Proposer des modifications**.
+
+## Personnalisation du CSS de votre thème
+
+Ces instructions fonctionnent mieux avec les thèmes officiellement pris en charge par GitHub Pages. Pour obtenir la liste complète des thèmes pris en charge, consultez [Thèmes pris en charge](/fr/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#supported-themes) sur le site GitHub Pages.
+
+Le référentiel source de votre thème peut offrir de l’aide pour personnaliser votre thème. Par exemple, consultez le [README de Minimal](https://github.com/pages-themes/minimal#customizing).
+
+1. Dans GitHub, accédez au dépôt de votre site.
+
+2. Accédez à la source de publication pour votre site. Pour plus d’informations, consultez « [Configuration d’une source de publication pour votre site GitHub Pages](/fr/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) ».
+
+3. Créez un fichier nommé `/assets/css/style.scss`.
+
+4. Ajoutez le contenu suivant au début du fichier :
+
+   ```scss
+   ---
+   ---
+
+   @import "{{ site.theme }}";
+   ```
+
+5. Ajoutez n’importe quel CSS ou Sass personnalisé (y compris les importations) de votre choix juste en dessous de la ligne `@import`.
+
+## Personnalisation de la disposition HTML de votre thème
+
+Ces instructions fonctionnent mieux avec les thèmes officiellement pris en charge par GitHub Pages. Pour obtenir la liste complète des thèmes pris en charge, consultez [Thèmes pris en charge](/fr/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#supported-themes) sur le site GitHub Pages.
+
+Le référentiel source de votre thème peut offrir de l’aide pour personnaliser votre thème. Par exemple, consultez le [README de Minimal](https://github.com/pages-themes/minimal#customizing).
+
+1. Sur GitHub, accédez au dépôt source de votre thème. Par exemple, le référentiel source pour Minimal est `https://github.com/pages-themes/minimal`.
+2. Dans le dossier `_layouts`, accédez au fichier `_default.html` de votre thème.
+3. Copiez le contenu du fichier.
+4. Dans GitHub, accédez au dépôt de votre site.
+5. Accédez à la source de publication pour votre site. Pour plus d’informations, consultez « [Configuration d’une source de publication pour votre site GitHub Pages](/fr/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) ».
+6. Créez un fichier appelé `_layouts/default.html`.
+7. Collez le contenu de disposition par défaut que vous avez copié précédemment.
+8. Personnalisez la disposition comme vous le souhaitez.
+
+## Pour aller plus loin
+
+* [Création de fichiers](/fr/repositories/working-with-files/managing-files/creating-new-files)
