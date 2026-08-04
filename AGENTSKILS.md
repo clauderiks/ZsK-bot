@@ -2,6 +2,20 @@
 Xem toàn bộ chỉ mục tài liệu tại: https://agentskills.io/llms.txt
 Hãy sử dụng tệp này để khám phá tất cả các trang có sẵn trước khi tìm hiểu thêm.
 
+Kỹ năng của Đặc vụ
+
+## Tài liệu
+
+- [Hướng dẫn cách thêm hỗ trợ kỹ năng cho tác nhân của bạn](https://agentskills.io/client-implementation/adding-skills-support.md): Hướng dẫn thêm hỗ trợ Kỹ năng cho tác nhân AI hoặc công cụ phát triển.
+- [Giới thiệu khách hàng](https://agentskills.io/clients.md): Các sản phẩm của Agent hỗ trợ định dạng Agent Skills.
+- [Tổng quan về kỹ năng của tác nhân](https://agentskills.io/home.md): Một cách thức tiêu chuẩn hóa để cung cấp cho các tác nhân AI những khả năng và chuyên môn mới.
+- [Thực tiễn tốt nhất dành cho người tạo kỹ năng](https://agentskills.io/skill-creation/best-practices.md): Cách viết các kỹ năng được xác định rõ ràng và phù hợp với nhiệm vụ.
+- [Đánh giá chất lượng đầu ra kỹ năng](https://agentskills.io/skill-creation/evaluating-skills.md): Cách kiểm tra xem kỹ năng của bạn có tạo ra đầu ra tốt hay không bằng cách sử dụng phương pháp lặp lại dựa trên đánh giá.
+- [Tối ưu hóa mô tả kỹ năng](https://agentskills.io/skill-creation/optimizing-descriptions.md): Cách cải thiện mô tả kỹ năng để nó được kích hoạt một cách đáng tin cậy khi có lời nhắc phù hợp.
+- [Hướng dẫn nhanh](https://agentskills.io/skill-creation/quickstart.md): Tạo Kỹ năng Agent đầu tiên của bạn và xem nó hoạt động trong VS Code.
+- [Sử dụng tập lệnh trong kỹ năng](https://agentskills.io/skill-creation/using-scripts.md): Cách chạy lệnh và đóng gói các tập lệnh có thể thực thi trong kỹ năng của bạn.
+- [Thông số kỹ thuật](https://agentskills.io/specification.md): Thông số kỹ thuật định dạng đầy đủ cho Kỹ năng của Agent.
+
 # Tổng quan về kỹ năng của đại lý
 
 > Một phương pháp tiêu chuẩn hóa để cung cấp cho các tác nhân AI những khả năng và chuyên môn mới.
