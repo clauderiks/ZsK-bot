@@ -1,162 +1,172 @@
-<div style="font-family:'IBM Plex Sans',sans-serif;background:#050B14;color:#E2E8F0;padding:32px;max-width:1000px;margin:auto;line-height:1.65;">
-  <section style="display:grid;gap:24px;">
-    <div style="padding:28px;background:#09101C;border:1px solid #1F2937;">
-      <h1 style="margin:0;font-size:3rem;letter-spacing:-0.04em;">ZsK AI Bot</h1>
-      <p style="margin:16px 0 0;color:#94A3B8;max-width:760px;">Minimal AI hosting and self-host agent demo with square-edge interface design, IBM-inspired dark surfaces, and clean RFC-style documentation structure. Designed for easy deployment, rapid local prototyping, and polished documentation.</p>
-    </div>
+<div align="center">
 
-    <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
-      <a href="#quick-links" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Quick Links</a>
-      <a href="#features" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Features</a>
-      <a href="#install" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Install</a>
-      <a href="./wiki/Home.md" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;font-weight:700;">Wiki</a>
-    </div>
+# ⌨️ Watson Shell
 
-    <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));">
-      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
-        <strong style="display:block;color:#E2E8F0;">License</strong>
-        <span style="color:#94A3B8;">Apache 2.0</span>
-      </div>
-      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
-        <strong style="display:block;color:#E2E8F0;">React</strong>
-        <span style="color:#94A3B8;">Modern UI</span>
-      </div>
-      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
-        <strong style="display:block;color:#E2E8F0;">TypeScript</strong>
-        <span style="color:#94A3B8;">Strict</span>
-      </div>
-      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
-        <strong style="display:block;color:#E2E8F0;">Vite</strong>
-        <span style="color:#94A3B8;">Fast build</span>
-      </div>
-      <div style="padding:18px;background:#091A26;border:1px solid #1F2937;">
-        <strong style="display:block;color:#E2E8F0;">Vercel</strong>
-        <span style="color:#94A3B8;">Serverless</span>
-      </div>
-    </div>
+**Giả lập terminal shell thông minh — tích hợp AI, đồng bộ đám mây và bảo mật 2FA**
 
-    <div style="padding:20px;background:#09101C;border:1px solid #1F2937;">
-      <img src="./assets/readme-hero.svg" alt="Hero panel" style="width:100%;display:block;border:1px solid #1F2937;" />
-      <p style="margin:14px 0 0;color:#94A3B8;font-size:0.95rem;">Hero panel preview. If the image does not render, open <code style="color:#E2E8F0;background:#0F172A;padding:2px 4px;border:1px solid #1F2937;">./assets/readme-hero.svg</code>.</p>
-    </div>
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-149eca?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)](https://vitejs.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Firebase](https://img.shields.io/badge/Firebase-12-ffca28?logo=firebase&logoColor=black)](https://firebase.google.com)
 
-    <div style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
-      <a href="./assets/sponsor-1.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 1</a>
-      <a href="./assets/sponsor-2.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 2</a>
-      <a href="./assets/sponsor-3.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 3</a>
-      <a href="./assets/sponsor-4.svg" style="display:block;padding:16px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;text-align:center;">Sponsor 4</a>
-    </div>
-  </div>
-</section>
+[Demo](#-demo) · [Tính năng](#-tính-năng-nổi-bật) · [Cài đặt](#-cài-đặt-nhanh) · [Cấu trúc](#-cấu-trúc-dự-án) · [Đóng góp](#-đóng-góp)
 
-<section id="quick-links" style="margin-top:34px;display:grid;gap:18px;">
-  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
-    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Quick links</h2>
-    <div style="display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
-      <a href="#features" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Features</a>
-      <a href="#install" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Install</a>
-      <a href="#deployment" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Deploy</a>
-      <a href="./wiki/Home.md" style="padding:14px;background:#091720;color:#E2E8F0;text-decoration:none;border:1px solid #1F2937;display:block;">Wiki</a>
-    </div>
-  </div>
-</section>
+</div>
 
-<section id="features" style="margin-top:34px;display:grid;gap:18px;">
-  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
-    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Features</h2>
-    <div style="display:grid;gap:12px;">
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Local free agent</strong>
-        <span style="color:#94A3B8;">`zsk` runs locally without external API keys.</span>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Self-host adapter</strong>
-        <span style="color:#94A3B8;">`OHMABA_URL` connects to your self-hosted or external agent endpoint.</span>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Vercel-ready</strong>
-        <span style="color:#94A3B8;">Serverless API and frontend deployment configured.</span>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Modern stack</strong>
-        <span style="color:#94A3B8;">React, TypeScript, Vite, and Express with clean doc structure.</span>
-      </div>
-    </div>
-  </div>
-</section>
+---
 
-<section id="install" style="margin-top:34px;display:grid;gap:18px;">
-  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
-    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Install</h2>
-    <div style="display:grid;gap:14px;">
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Prerequisites</strong>
-        <span style="color:#94A3B8;">Node.js >= 18, npm or yarn.</span>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Setup</strong>
-        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">git clone https://github.com/clauderiks/ZsK-bot.git
+## 📖 Giới thiệu
+
+**Watson Shell** là một ứng dụng web mô phỏng một terminal / shell thông minh, kết hợp giao diện dòng lệnh cổ điển với sức mạnh của AI hiện đại. Dự án tích hợp **Gemini AI** để phân tích và gợi ý lệnh theo thời gian thực, đồng bộ dữ liệu qua **Cloudant Cloud Sync**, tô sáng cú pháp (syntax highlighting) cho nhiều ngôn ngữ lập trình, và cơ chế bảo mật hai lớp (2FA) — tất cả gói gọn trong một trải nghiệm terminal mượt mà, trực quan ngay trên trình duyệt.
+
+Ngoài ra, Watson Shell còn tích hợp sẵn các drawer kết nối nhanh tới hệ sinh thái Google (Docs, Tasks, Chat, Forms), một trình xem tài liệu RFC tích hợp, và khả năng xuất kết quả phiên làm việc ra PDF / Markdown / CSV.
+
+---
+
+## ✨ Tính năng nổi bật
+
+| | Tính năng | Mô tả |
+|---|---|---|
+| 🧠 | **AI Engine tích hợp** | Phân tích lệnh, gợi ý tối ưu và phát hiện bất thường được hỗ trợ bởi Google Gemini (`@google/genai`) |
+| ☁️ | **Cloudant Cloud Sync** | Đồng bộ phiên làm việc, lịch sử lệnh và thiết bị theo thời gian thực |
+| 🔐 | **Bảo mật 2FA** | Xác thực hai lớp và mã hoá đầu-cuối cho phiên làm việc |
+| 🎨 | **Syntax Highlighting** | Tô màu cú pháp đa ngôn ngữ (JS, SQL, YAML, JSON, Rust, …) ngay trong terminal |
+| 📂 | **Project Tree Sidebar** | Duyệt cây thư mục dự án ảo, xem nội dung file trực tiếp |
+| 📊 | **Watson Analysis Panel** | Bảng phân tích song song hiển thị số liệu real-time (node efficiency, latency, độ tin cậy AI…) |
+| 📄 | **RFC Viewer** | Tra cứu và đọc nhanh các tài liệu RFC/tiêu chuẩn kỹ thuật ngay trong app |
+| 🔗 | **Tích hợp Google Workspace** | Drawer nhanh cho Google Docs, Tasks, Chat và Forms |
+| 📤 | **Export đa định dạng** | Xuất lịch sử phiên làm việc ra PDF, Markdown hoặc CSV chỉ với một cú click |
+| 🔔 | **Notifications & Device Sync** | Theo dõi trạng thái đồng bộ trên nhiều thiết bị (mobile, tablet, desktop) |
+
+---
+
+## 🖥️ Terminal
+
+> Terminal ảo hiển thị lịch sử lệnh dạng JSON/Markdown/Table, đi kèm bảng phân tích Watson AI theo thời gian thực và cây thư mục dự án ở sidebar.
+
+```
+$ watson run-analysis --db cloudant_prod --depth full
+✔ Connecting to IBM Cloudant instance...
+✔ Triggering Watson ML analysis pipeline...
+  → records_processed: 1,402,991
+  → anomalies_detected: 14
+  → ai_confidence: 0.992
+```
+
+---
+
+## 🧰 Công nghệ sử dụng
+
+- **Frontend:** [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- **Build tool:** [Vite 6](https://vitejs.dev)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com)
+- **AI:** [Google Gemini API](https://ai.google.dev) (`@google/genai`)
+- **Backend/Cloud:** [Firebase](https://firebase.google.com) 12, Express
+- **Data & biểu đồ:** [Recharts](https://recharts.org)
+- **Animation:** [Motion](https://motion.dev)
+- **Icon:** [Lucide React](https://lucide.dev)
+
+---
+
+## 🚀 Cài đặt nhanh
+
+### Yêu cầu
+
+- Node.js `>= 18`
+- [Bun](https://bun.sh) hoặc `npm` / `yarn`
+- API key của Gemini ([lấy tại Google AI Studio](https://aistudio.google.com/))
+
+### Các bước
+
+```bash
+# 1. Clone dự án
+git clone https://github.com/<your-username>/ZsK-bot.git
 cd ZsK-bot
+
+# 2. Cài đặt dependencies
 npm install
-cp .env.example .env</pre>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Run local</strong>
-        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">npm run api
-npm run dev</pre>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Concurrent</strong>
-        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">npx concurrently "npm run api" "npm run dev"</pre>
-      </div>
-    </div>
-  </div>
-</section>
+# hoặc: bun install
 
-<section id="deployment" style="margin-top:34px;display:grid;gap:18px;">
-  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
-    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Deployment</h2>
-    <div style="display:grid;gap:14px;">
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Vercel</strong>
-        <span style="color:#94A3B8;">Deploy the app with the existing <code style="color:#E2E8F0;background:#08121F;padding:2px 4px;border:1px solid #1F2937;">vercel.json</code> config.</span>
-        <pre style="margin:12px 0 0;color:#E2E8F0;background:#08121F;padding:16px;border:1px solid #1F2937;overflow:auto;">vercel --prod</pre>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Env variables</strong>
-        <ul style="margin:12px 0 0 20px;color:#CBD5E1;">
-          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">DEFAULT_MODEL</code></li>
-          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">OHMABA_URL</code></li>
-          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">OHMABA_API_KEY</code></li>
-          <li><code style="background:#08121F;color:#E2E8F0;padding:2px 4px;border:1px solid #1E293B;">GEMINI_API_KEY</code></li>
-        </ul>
-      </div>
-      <div style="padding:18px;background:#091720;border:1px solid #1F2937;">
-        <strong style="color:#E2E8F0;display:block;">Hugging Face Space</strong>
-        <span style="color:#94A3B8;">Push the <code style="color:#E2E8F0;background:#08121F;padding:2px 4px;border:1px solid #1F2937;">huggingface-space-kimi-demo/</code> folder to a Space and add <code style="color:#E2E8F0;background:#08121F;padding:2px 4px;border:1px solid #1F2937;">HF_TOKEN</code> if needed.</span>
-      </div>
-    </div>
-  </div>
-</section>
+# 3. Thiết lập biến môi trường
+cp .env.example .env
+# → Mở file .env và điền GEMINI_API_KEY của bạn
 
-<section style="margin-top:34px;display:grid;gap:18px;">
-  <div style="padding:24px;background:#09101C;border:1px solid #1F2937;">
-    <h2 style="margin:0 0 12px 0;color:#E2E8F0;">Project structure</h2>
-    <pre style="background:#08121F;color:#E2E8F0;padding:16px;border:1px solid #1F2937;overflow:auto;">ZsK-bot-main/
+# 4. Chạy môi trường phát triển
+npm run dev
+```
+
+Ứng dụng sẽ chạy tại `http://localhost:3000`.
+
+### Các script có sẵn
+
+| Lệnh | Mô tả |
+|---|---|
+| `npm run dev` | Chạy server phát triển (hot reload) |
+| `npm run build` | Build bản production |
+| `npm run preview` | Xem trước bản build |
+| `npm run lint` | Kiểm tra type với TypeScript |
+| `npm run clean` | Xoá thư mục build |
+
+---
+
+## 📁 Cấu trúc dự án
+
+```
+ZsK-bot-main/
 ├── src/
-│   ├── components/         # UI components
-│   ├── utils/               # app logic utilities
-│   ├── types/               # TypeScript definitions
-│   ├── App.tsx              # main app component
-│   ├── main.tsx             # entry point
-│   └── index.css            # styles
-├── content/actions/         # how-to docs
-├── text/                    # reference docs
-├── assets/                  # static assets
-├── wiki/                    # internal wiki docs
+│   ├── components/         # Các UI component (Terminal, Drawer, Modal, Sidebar...)
+│   ├── utils/               # Logic xử lý: Watson Engine, Google Auth, Export...
+│   ├── types/                # Định nghĩa kiểu dữ liệu TypeScript
+│   ├── App.tsx               # Component gốc, quản lý state toàn cục
+│   ├── main.tsx               # Entry point
+│   └── index.css               # Global styles (Tailwind)
+├── content/actions/          # Tài liệu how-to
+├── text/                       # Tài liệu tham khảo (RFC, spec...)
+├── assets/                      # Tài nguyên tĩnh
 ├── index.html
 ├── vite.config.ts
-└── package.json</pre>
-  </div>
-</section>
+└── package.json
+```
+
+---
+
+## ⚙️ Cấu hình môi trường
+
+Tạo file `.env` từ `.env.example` với các biến sau:
+
+| Biến | Mô tả |
+|---|---|
+| `GEMINI_API_KEY` | API key dùng để gọi Gemini AI |
+| `APP_URL` | URL nơi ứng dụng được host (dùng cho OAuth callback, self-reference) |
+
+> ⚠️ **Lưu ý bảo mật:** Không commit file `.env` hoặc bất kỳ khoá API/cấu hình nhạy cảm nào (ví dụ `firebase-applet-config.json`) lên kho lưu trữ công khai.
+
+---
+
+## 🤝 Đóng góp
+
+Mọi đóng góp đều được chào đón! Để đóng góp:
+
+1. Fork dự án
+2. Tạo nhánh tính năng (`git checkout -b feature/ten-tinh-nang`)
+3. Commit thay đổi (`git commit -m 'Thêm tính năng abc'`)
+4. Push lên nhánh (`git push origin feature/ten-tinh-nang`)
+5. Mở một Pull Request
+
+Vui lòng tạo issue trước nếu bạn muốn thảo luận về thay đổi lớn.
+
+---
+
+## 📜 Giấy phép
+
+Dự án được phát hành theo giấy phép **Apache-2.0**. Xem chi tiết tại [LICENSE](LICENSE).
+
+---
+
+<div align="center">
+
+Made with ❤️ bằng React & TypeScript
+
 </div>
