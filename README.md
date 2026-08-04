@@ -42,7 +42,7 @@ Ngoài ra, Watson Shell còn tích hợp sẵn các drawer kết nối nhanh t�
 
 ---
 
-## 🖥️ Demo
+## 🖥️ Terminal
 
 > Terminal ảo hiển thị lịch sử lệnh dạng JSON/Markdown/Table, đi kèm bảng phân tích Watson AI theo thời gian thực và cây thư mục dự án ở sidebar.
 
